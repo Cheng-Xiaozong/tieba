@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+body{font:12px "微软雅黑";color:#333;background: #fff;}
+body, ol, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select{margin:0px; padding:0px; color: #333333; }
+h1, h2, h3, h4, h5, h6, em, i, b, strong{font-style:normal;font-weight: normal;}
+a{text-decoration:none;color:#333333;border:none;}
+a:hover{text-decoration:underline; color:#fa9507;}
+img{border:none; vertical-align:top;}
+li{list-style:none;}
+table { border-collapse:collapse; }
+input,textarea { outline:none; }
+textarea { resize:none; overflow:auto; border: 1px solid #686868;}
+
+.left{float:left;}
+.right{float:right;} 
+.border{border:1px solid #e9e9e9;}
+.box{max-width:1200px;margin:0 auto;}
+
+/* ----- clear fix for floats ----- */
+/* these styles instruct non-IE browsers to render container elements so that they fully enclose floats */		
+/* without this class applied, a float might hang over the bottom border of it's container */
+.clearfix:after{content:"."; width:0; height:0; line-height:0; font-size:0; display:block; clear:both;visibility:hidden;overflow:hidden;margin:0;}
+.clearfix {display:inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height:1%;}
+.clearfix{display:block;}
+/* End hide from IE-mac */
+
+.tijiao{margin-bottom: 10px;}
+.tijiao textarea{width: 100%;padding: 10px;}
+.tijiao input{float: right;margin-top: 10px;}
+
+.huifu li{background: #D8D8D8;border-bottom: 1px solid #d8d8d8;margin-bottom: 10px;padding: 5px;}
+.huifu li .box{border: 1px solid #fff;padding: 10px;}
+.huifu li .box p u{font-weight: bold;text-decoration: none;}
+.huifu li .box a{display:inline-block;padding: 2px 15px;background: #7E7E7E;border-radius: 10px;color:#FFFFFF;float: right;margin-right: 17px;}
+
+.huifunr{width: 70%;float: right;padding: 15px;display: none;background: #F0F0F0}
+.huifunr ul{border: 1px solid #686868;padding: 10px;border-bottom: none;}
+.huifunr ul li{border-bottom: 1px solid #686868;background: #F0F0F0}
+.huifunr ul li i{color:#FF0000;}
+.huifunr ul li div{text-align: right;}

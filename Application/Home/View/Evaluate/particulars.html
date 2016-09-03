@@ -1,0 +1,45 @@
+<ul class="nav nav-pills ">
+  <li role="presentation"><a href="{:U('Index/index')}">首页</a></li>
+  <li role="presentation"  class="active"><a href="{:U('Evaluate/index')}">评论</a></li>
+  <li role="presentation"><a href="#">其他</a></li>
+</ul>
+
+
+<div style="text-align: center">
+	<h1 wzid="{$data.id}">{$data.title}</h1>
+	<p>时间：{$data.date}  作者：{$data.user_name}</p>
+	<p>{$data.content}</p>
+</div>
+
+<!-- 评论输入 -->
+<div class="tijiao clearfix">
+    <textarea name="text"></textarea>
+    <input type="button" value="提交评论" class="ajtijiao">
+</div>
+
+<!-- 评论列表 -->
+<ul class="huifu">
+  <volist name="data_pl" id="vo">  
+   <li id="{$vo.id}">
+      <div class="box clearfix">
+          <div><span style="color:red;">{$vo.user_name}</span> <span class="right">{$vo.date}</span></div>
+          <p><u>{$vo.content}</u></p>
+          <p class="clearfix huifua"><a num="10" cid="{$vo.cid}" href="javascript:void(0)">回复</a></p>
+          <div class="huifunr">
+                    <!-- 评论列表 -->
+                    <ul> 
+                          <!-- <li><p><i>我是小强：</i><u>楼上的都是傻逼</u></p><div>2016年8月24日 12:52:15 <a href="javascript:void(0)">回复</a></div></li> -->
+                          <!-- <li><p><i>马蓉</i>  回复  <i>王思聪：</i><u>楼上的都是傻逼</u></p><div>2016年8月24日 12:52:15 <a href="javascript:void(0)">回复</a></div></li> -->
+                    </ul>
+                    <!-- 回复功能 -->
+                    <div class="tijiao clearfix">
+                      <textarea name="text"></textarea>
+                      <input type="button" value="提交评论" class="huifunr_tj">
+                  </div>
+            </div>
+      </div>
+  </li>
+</volist>
+</ul>
+<script src="__PUBLIC__/home/js/Evaluate.js"></script>
+
